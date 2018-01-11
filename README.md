@@ -12,9 +12,11 @@ A (product, price) pair is valid if:
 • If product starts with ‘C’ – price should be equal or higher than 1000
 All other cases - (product, price) is invalid.
 
-3.	HPI.DataAccessLayer :- This project contains the definition of the product datamodel that corresponds to the Product table in MySQL db. The table has been created using the code first approach. The reviewer needs to execute “Update-Migration” using the Nuget package manager console with default project being selected as “HPI.DataAccessLayer”. 
+3.	HPI.DataAccessLayer :- This project contains the definition of the product datamodel that corresponds to the Product table in MySQL db. The table has been created using the code first approach. The reviewer needs to execute “Update-Database” using the Nuget package manager console with default project being selected as “HPI.DataAccessLayer”. 
 The connection string stored in the app.config of HPI.DataAccessLayer project needs to be modified with the details of the MySQL server of the reviewer’s environment.
-Execution of the Update-Migration command will create the Product table along with the Migration history in MySQL server.
+Execution of the Update-Database command will create the Product table along with the Migration history in MySQL server. In case if the Update-Database command does not work as it is then try this
+
+Update-Database -Verbose -StartUpProjectName “HPI.DataAccessLayer” -ConnectionString "server=localhost;port=3306;database=mycontext;uid=root;password=********" -ConnectionProviderName “MySql.Data.MySqlClient”
 
 4.	HPI.NUnit.Tests :- This project implements unit tests on the HPI.BusinessServices by mocking the ProductRepository to test retrieval and saving of Product data through the HPI.BusinessServices.ProductService class.There is a batch file named "CodeCoverage.bat" that will execute all the NUnit Test cases and will publish the code coverage results to an HTML file. There is 97% code coverage for the HPI.BusinessServices that mocks data for the ProductRepository and performs unit tests on the ProductService and the validations on the product model. This project does not perform integration testing on the ProductController of the ASP.Net WEB API.
 
