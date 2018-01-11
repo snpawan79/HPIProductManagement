@@ -14,7 +14,7 @@ All other cases - (product, price) is invalid.
 
 3.	HPI.DataAccessLayer :- This project contains the definition of the product datamodel that corresponds to the Product table in MySQL db. The table has been created using the code first approach. The reviewer needs to execute “Update-Database” using the Nuget package manager console with default project being selected as “HPI.DataAccessLayer”. 
 The connection string stored in the app.config of HPI.DataAccessLayer project needs to be modified with the details of the MySQL server of the reviewer’s environment.
-Execution of the Update-Database command will create the Product table along with the Migration history in MySQL server. In case if the Update-Database command does not work as it is then try this
+Execution of the Update-Database command will create the Product table along with the Migration history in MySQL server. In case if the Update-Database command does not work as it is then try this into the package manager console
 
 Update-Database -Verbose -StartUpProjectName “HPI.DataAccessLayer” -ConnectionString "server=localhost;port=3306;database=mycontext;uid=root;password=********" -ConnectionProviderName “MySql.Data.MySqlClient”
 
