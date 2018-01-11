@@ -6,6 +6,7 @@ Code Walkthrough
 2.	HPI.BusinessServices :- This project contains the business functionality to retrieve and add products using ProductRepository and UnitOfWork. This project also implements the rule engine to validate price based on the first character of the product code as listed below
 
 A (product, price) pair is valid if:
+
 • If product starts with ‘A’ – price should be higher than 0 and lower than 100
 • If product starts with ‘B’ – price should be equal or higher than 100 and lower than 1000
 • If product starts with ‘C’ – price should be equal or higher than 1000
@@ -25,7 +26,7 @@ Execution of the Update-Migration command will create the Product table along wi
 
 This project has been set as a startup project in this solution and can be run within visual studio IDE. 
 
-Click on API link on the tool bar on your browser. This will navigate to http://localhost:<port>/Help. This page will provide the list of APIs implemented in the ProductController for GetAll, GetProductByCode and Insert a new product. 
+Click on API link on the tool bar on your browser. This will navigate to http://localhost:PortNumber/Help. This page will provide the list of APIs implemented in the ProductController for GetAll, GetProductByCode and Insert a new product. 
 
 Clicking on any of these links will show button to test the Rest API on the bottom right hand corner of the browser window.
 
