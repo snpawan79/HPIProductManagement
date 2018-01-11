@@ -3,8 +3,64 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.BusinessEntities", "HPI.BusinessEntities\HPI.BusinessEntities.csproj", "{823AF783-DDEA-430D-A3DE-E28091E6CB41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.BusinessServices", "HPI.BusinessServices\HPI.BusinessServices.csproj", "{90AF4C8E-2137-457A-AED1-360AD3C6B6B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.DataAccessLayer", "HPI.DataAccessLayer\HPI.DataAccessLayer.csproj", "{35A91FC6-82CD-449A-96B4-25889318B024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.ValidationRuleEngine", "HPI.ValidationRuleEngine\HPI.ValidationRuleEngine.csproj", "{C6DC1DF1-7370-4B4C-A6F0-3C41B5D619AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.WebAPI", "HPI.WebAPI\HPI.WebAPI.csproj", "{491B9F11-FAB5-431A-911B-BF7CE4BD7B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.Resolver", "HPI.Resolver\HPI.Resolver.csproj", "{D09B6B96-0556-45AC-A14C-7EDCA8F0A557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPI.NUnit.Tests", "HPI.NUnit.Tests\HPI.NUnit.Tests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{42BD241E-84C3-4714-AD66-150BEB15D68A}"
+	ProjectSection(SolutionItems) = preProject
+		CodeCoverage.bat = CodeCoverage.bat
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823AF783-DDEA-430D-A3DE-E28091E6CB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823AF783-DDEA-430D-A3DE-E28091E6CB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823AF783-DDEA-430D-A3DE-E28091E6CB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823AF783-DDEA-430D-A3DE-E28091E6CB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AF4C8E-2137-457A-AED1-360AD3C6B6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AF4C8E-2137-457A-AED1-360AD3C6B6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AF4C8E-2137-457A-AED1-360AD3C6B6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AF4C8E-2137-457A-AED1-360AD3C6B6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A91FC6-82CD-449A-96B4-25889318B024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A91FC6-82CD-449A-96B4-25889318B024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A91FC6-82CD-449A-96B4-25889318B024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A91FC6-82CD-449A-96B4-25889318B024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6DC1DF1-7370-4B4C-A6F0-3C41B5D619AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DC1DF1-7370-4B4C-A6F0-3C41B5D619AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DC1DF1-7370-4B4C-A6F0-3C41B5D619AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DC1DF1-7370-4B4C-A6F0-3C41B5D619AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491B9F11-FAB5-431A-911B-BF7CE4BD7B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491B9F11-FAB5-431A-911B-BF7CE4BD7B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491B9F11-FAB5-431A-911B-BF7CE4BD7B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491B9F11-FAB5-431A-911B-BF7CE4BD7B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09B6B96-0556-45AC-A14C-7EDCA8F0A557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09B6B96-0556-45AC-A14C-7EDCA8F0A557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09B6B96-0556-45AC-A14C-7EDCA8F0A557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09B6B96-0556-45AC-A14C-7EDCA8F0A557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
 	EndGlobalSection
 EndGlobal
