@@ -16,7 +16,7 @@ All other cases - (product, price) is invalid.
 The connection string stored in the app.config of HPI.DataAccessLayer project needs to be modified with the details of the MySQL server of the reviewer’s environment.
 Execution of the Update-Migration command will create the Product table along with the Migration history in MySQL server.
 
-4.	HPI.NUnit.Tests :- This project implements unit tests on the HPI.BusinessServices by mocking the ProductRepository to test retrieval and saving of Product data through the HPI.BusinessServices.ProductService class.
+4.	HPI.NUnit.Tests :- This project implements unit tests on the HPI.BusinessServices by mocking the ProductRepository to test retrieval and saving of Product data through the HPI.BusinessServices.ProductService class.There is a batch file named "CodeCoverage.bat" that will execute all the NUnit Test cases and will publish the code coverage results to an HTML file. There is 97% code coverage for the HPI.BusinessServices that mocks data for the ProductRepository and performs unit tests on the ProductService and the validations on the product model. This project does not perform integration testing on the ProductController of the ASP.Net WEB API.
 
 5.	HPI.Resolver :- Resolves the dependency for the ProductService on the ProductController and dependency for UnitOfWork on the ProductService. 
 
@@ -33,6 +33,6 @@ Clicking on any of these links will show button to test the Rest API on the bott
  
 Clicking on this button will open a dialog to send the request to the API and retrieve the status. 
 
-
+The functionality to implement authentication of Rest API methods, error handling and logging of web requests has not been implemented . This can be explained during the code walkthrough session if there is any. 
 
 
