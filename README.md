@@ -16,7 +16,7 @@ All other cases - (product, price) is invalid.
 The connection string stored in the app.config of HPI.DataAccessLayer project needs to be modified with the details of the MySQL server of the reviewer’s environment.
 Execution of the Update-Database command will create the Product table along with the Migration history in MySQL server. In case if the Update-Database command does not work as it is then try this into the package manager console
 
-Update-Database -Verbose -StartUpProjectName “HPI.DataAccessLayer” -ConnectionString "server=localhost;port=3306;database=mycontext;uid=root;password=********" -ConnectionProviderName “MySql.Data.MySqlClient”
+Update-Database -Verbose -StartUpProjectName “HPI.DataAccessLayer” -ConnectionString "server=localhost;port=3306;database=ProductDB;uid=root;password=********" -ConnectionProviderName “MySql.Data.MySqlClient”
 
 4.	HPI.NUnit.Tests :- This project implements unit tests on the HPI.BusinessServices by mocking the ProductRepository to test retrieval and saving of Product data through the HPI.BusinessServices.ProductService class.There is a batch file named "CodeCoverage.bat" that will execute all the NUnit Test cases and will publish the code coverage results to an HTML file. There is 97% code coverage for the HPI.BusinessServices that mocks data for the ProductRepository and performs unit tests on the ProductService and the validations on the product model. This project does not perform integration testing on the ProductController of the ASP.Net WEB API.
 
