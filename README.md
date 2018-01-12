@@ -26,7 +26,7 @@ Update-Database -Verbose -StartUpProjectName “HPI.DataAccessLayer” -Connecti
 
 7.	HPI.WebAPI :- This is the ASP.Net web api project that implements the Rest APIs for retrieving and storing the product key value pair from and to MySql database via the ProductService that in turn calls the DataAccessLayer using entity framework.
 
-This project has been set as a startup project in this solution and can be run within visual studio IDE. 
+This project has been set as a startup project in this solution and can be run within visual studio IDE. In case if there is a build error for the ApplicationInsights.config file then exclude it from the project and retry building the solution.
 
 Click on API link on the tool bar on your browser. This will navigate to http://localhost:PortNumber/Help. This page will provide the list of APIs implemented in the ProductController for GetAll, GetProductByCode and Insert a new product. 
 
